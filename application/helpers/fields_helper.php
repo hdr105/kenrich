@@ -170,7 +170,7 @@ function render_date_input($name, $label = '', $value = '', $input_attrs = array
         $input .= '<label for="' . $name . '" class="control-label">' . _l($label, '', false) . '</label>';
     }
     $input .= '<div class="input-group date">';
-    $input .= '<input type="text" id="' . $name . '" name="' . $name . '" class="form-control datepicker' . $input_class . '" ' . $_input_attrs . ' value="' . set_value($name, $value) . '">';
+    $input .= '<input type="text" id="' . $name . '" name="' . $name . '" autocomplete="off" class="form-control datepicker' . $input_class . '" ' . $_input_attrs . ' value="' . set_value($name, $value) . '">';
     $input .= '<div class="input-group-addon">
     <i class="fa fa-calendar calendar-icon"></i>
 </div>';
@@ -197,6 +197,20 @@ function render_datetime_input($name, $label = '', $value = '', $input_attrs = a
 
     return $html;
 }
+function render_time_feild($name, $label = '', $value = '')
+{
+ 
+    $picker = '';
+    $picker .= '<div class="form-group" app-field-wrapper="'.$name.'">';
+    $picker .= '<label for="' . $name . '" class="control-label">' . $label . '</label>';
+    $picker .= '<div class="input-group">
+    <input type="text" value="' . set_value($name, $value) . '" name="' . $name . '" id="' . $name . '" class="form-control time" autocomplete="off" />
+    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+</div>';
+    $picker .= '</div>';
+
+    return $picker;
+}
 /**
  * Render textarea for admin area
  * @param  [type] $name             textarea name
@@ -208,6 +222,7 @@ function render_datetime_input($name, $label = '', $value = '', $input_attrs = a
  * @param  string $textarea_class      <textarea> additional class
  * @return string
  */
+
 function render_textarea($name, $label = '', $value = '', $textarea_attrs = array(), $form_group_attr = array(), $form_group_class = '', $textarea_class = '')
 {
     $textarea         = '';
@@ -250,7 +265,7 @@ function render_textarea($name, $label = '', $value = '', $textarea_attrs = arra
     if (!empty($form_group_class)) {
         $form_group_class = ' ' . $form_group_class;
     }
-    $textarea .= '<div class="form-group' . $form_group_class . '" ' . $_form_group_attr . '>';
+    $textarea .= '<div class="form-group capital' . $form_group_class . '" ' . $_form_group_attr . '>';
     if ($label != '') {
         $textarea .= '<label for="' . $name . '" class="control-label">' . _l($label, '', false) . '</label>';
     }

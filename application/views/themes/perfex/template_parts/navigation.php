@@ -27,7 +27,10 @@
         <li class="customers-nav-item-login"><a href="<?php echo site_url('clients/login'); ?>"><?php echo _l('clients_nav_login'); ?></a></li>
         <?php } else { ?>
         <?php if(has_contact_permission('lifestyle')){ ?>
-        <li class="customers-nav-item-lifestyle"><a href="#"><?php echo _l('clients_nav_lifestyle'); ?></a></li>
+        <li class="customers-nav-item-lifestyle">
+          <a href="<?php echo base_url('Lifestyle/index'); ?>"><?php echo _l('clients_nav_lifestyle'); ?></a>
+
+        </li>
         <?php } ?>
         <?php if(has_contact_permission('ovulation')){ ?>
         <li class="customers-nav-item-ovulation"><a href="#"><?php echo _l('clients_nav_ovulation'); ?></a></li>

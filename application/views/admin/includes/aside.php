@@ -70,9 +70,14 @@ Spam Filters</a>
   Modules         <span class="fa arrow"></span>
 </a>
 <ul class="nav nav-second-level collapse" aria-expanded="false">
-  <li class="sub-menu-item-child-proposals"><a href="#">
+  <li class="sub-menu-item-child"><a href="#">
   Lifestyle</a>
-</li>
+  <ul class="nav nav-second-level collapse" aria-expanded="false">
+    <li class="sub-menu-item-child"><a href="<?php echo base_url('admin/foods') ?>"> Food & Nutrition diary</a></li>
+    <li class="sub-menu-item-child"><a href="<?php echo base_url('admin/sleeps') ?>"> Sleep diary</a></li>
+    <li class="sub-menu-item-child"><a href="<?php echo base_url('admin/activities') ?>"> Daily activity</a></li>
+  </ul>
+  </li>
 <li class="sub-menu-item-child-estimates"><a href="#">
 Ovulation</a>
 </li>

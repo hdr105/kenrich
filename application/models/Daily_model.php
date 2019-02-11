@@ -76,5 +76,16 @@ class Daily_model extends CRM_Model
 		return $query->row();
 	}
 
+	public function get_data_where($id,$start="",$end="")
+	{
+		$this->db->select();
+		$this->db->from('activities');
+		$this->db->where("client_id",$id);
+		$this->db->where("a_created_at BETWEEN '$start' AND '$end'");
+		$this->db->order_by("a_created_at","DESC");
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
 }
 ?>

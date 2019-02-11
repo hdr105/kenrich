@@ -54,6 +54,18 @@ class Sleep_model extends CRM_Model
 	}
 
 
+	public function get_data_where($id,$start="",$end="")
+	{
+		$this->db->select();
+		$this->db->from('sleeps');
+		$this->db->where("client_id",$id);
+		$this->db->where("nap_created_at BETWEEN '$start' AND '$end'");
+		$this->db->order_by("nap_created_at","DESC");
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+
 	public function get_via_id($id)
 	{
 		$this->db->select();

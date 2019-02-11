@@ -19,6 +19,7 @@
 				$("#showdata").html(`<div class="alert alert-danger">
 					<strong>Danger!</strong> No Data Found.
 					</div>`);
+				$('.searchlive').select2();
 			}
 		});
 	});

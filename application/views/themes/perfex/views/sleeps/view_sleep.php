@@ -28,7 +28,7 @@
                   $date = $sleep['nap_created_at'];
                   $format = date_create($date);
                   $formatted_date = date_format($format,'l jS F Y');
-                  $sleep_hours = $sleep['s_to']-$sleep['s_from'];
+                  $sleep_hours = (strtotime($sleep['s_to'])-strtotime($sleep['s_from']))/3600;
                   $disturbed_from = $sleep['d_nap_from'];
                   $power_from = $sleep['p_nap_from'];
                   $dis_desp = $sleep['d_desp'];
@@ -49,7 +49,7 @@
                        <th><?php echo $sleep['s_from']; ?></th>
                        <th>Till</th>
                        <th><?php echo $sleep['s_to']; ?></th>
-                       <th><?php echo $sleep['s_to']-$sleep['s_from']; ?> Hour sleeps</th>
+                       <th><?php echo (strtotime($sleep['s_to'])-strtotime($sleep['s_from']))/3600; ?> Hour sleeps</th>
                        <th class="width-25"><a href="<?php echo base_url('Sleep/edit/').$sleep['s_id']; ?>" class="btn btn-default btn-icon"><i class="fa fa-pencil-square-o"></i></a>&nbsp;<a href="<?php echo base_url('Sleep/delete/').$sleep['s_id']; ?>" class="btn btn-danger _delete btn-icon"><i class="fa fa-remove"></i></a></th> 
                      </thead>
 
@@ -76,7 +76,7 @@
                                 <th><?php echo $sleep['d_nap_to']; ?></th>
                                 <th>Reason</th>
                                 <th><?php echo $new_desp; ?></th>
-                                <th><?php echo $sleep['d_nap_to']-$sleep['d_nap_from']; ?> Hours Disturbed</th>
+                                <th><?php echo (strtotime($sleep['d_nap_to'])-strtotime($sleep['d_nap_from']))/3600; ?> Hours Disturbed</th>
                               </tr>
                             </thead>
                           </table>
@@ -91,7 +91,7 @@
                                 <th><?php echo $sleep['p_nap_from']; ?></th>
                                 <th>Till</th>
                                 <th><?php echo $sleep['p_nap_to']; ?></th>
-                                <th><?php echo $sleep['p_nap_to']-$sleep['p_nap_from']; ?> Hours Power Nap</th>
+                                <th><?php echo (strtotime($sleep['p_nap_to'])-strtotime($sleep['p_nap_from']))/3600; ?> Hours Power Nap</th>
                               </tr>
                             </thead>
                           </table>

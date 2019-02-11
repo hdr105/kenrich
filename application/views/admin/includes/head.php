@@ -11,6 +11,7 @@
     <title><?php if (isset($title)){ echo $title; } else { echo get_option('companyname'); } ?></title>
     <?php echo app_stylesheet('assets/css','reset.css'); ?>
     <link href='<?php echo base_url('assets/plugins/roboto/roboto.css'); ?>' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link href="<?php echo base_url('assets/plugins/app-build/vendor.css?v='.get_app_version()); ?>" rel="stylesheet">
     <?php if($isRTL === 'true'){ ?>
     <link href="<?php echo base_url('assets/plugins/bootstrap-arabic/css/bootstrap-arabic.min.css'); ?>" rel="stylesheet">
@@ -26,11 +27,20 @@
     <link href='<?php echo base_url('assets/plugins/gantt/css/style.css'); ?>' rel='stylesheet' />
     <?php } ?>
     <?php echo app_stylesheet('assets/css','style.css'); ?>
+
     <?php if(file_exists(FCPATH.'assets/css/custom.css')){ ?>
     <link href="<?php echo base_url('assets/css/custom.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <?php } ?>
     <?php render_custom_styles(array('general','tabs','buttons','admin','modals','tags')); ?>
     <?php render_admin_js_variables(); ?>
+    
+<style type="text/css">
+@font-face {
+  font-family: DINPro-Regular;
+  src: url(<?php echo base_url('assets/fonts/DINPro-Regular.otf'); ?>);
+}
+</style>
     <script>
         appLang['datatables'] = <?php echo json_encode(get_datatables_language_array()); ?>;
 
@@ -46,14 +56,15 @@
         months_json = '<?php echo json_encode(array(_l('January'),_l('February'),_l('March'),_l('April'),_l('May'),_l('June'),_l('July'),_l('August'),_l('September'),_l('October'),_l('November'),_l('December'))); ?>',
         _table_api,taskid,task_tracking_stats_data,taskAttachmentDropzone,leadAttachmentsDropzone,newsFeedDropzone,expensePreviewDropzone,task_track_chart,cfh_popover_templates = {};
     </script>
+
     <?php do_action('app_admin_head'); ?>
     <style type="text/css">
     @font-face {
-        font-family: DinoFont;
-        src: url(<?php echo base_url()."assets/fonts/DINOPro-Regular.otf"; ?>);
+        font-family: DINPro-Regular;
+        src: url(<?php echo base_url()."assets/fonts/DINPro-Regular.otf"; ?>);
     }
     body {
-        font-family: DinoFont;
+        font-family: DINPro-Regular;
     }
     .admin #header {
        background: rgb(162,111,26);
@@ -88,7 +99,7 @@
 }
 
 #side-menu li a {  
-    font-family: DinoFont !important;
+    font-family: DINPro-Regular !important;
 }
 </style>
 </head>

@@ -89,6 +89,18 @@ class Food_Nutrition_model extends CRM_Model
 		return $this->db->delete('food_nutritions', array($column => $id));
 	}
 
+	public function get_data_where($id,$start="",$end="")
+	{
+		$this->db->select();
+		$this->db->from('food_nutritions');
+		$this->db->where("client_id",$id);
+		$this->db->where("fn_date BETWEEN '$start' AND '$end'");
+		$this->db->group_by("fn_date");
+		$this->db->order_by("fn_date","DESC");
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
 
 }
 ?>

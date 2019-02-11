@@ -9,7 +9,7 @@
        <div class="clearfix"></div>
        <div class="form-group select-placeholder">
         <label for="clientid" class="control-label"><?php echo _l('Client'); ?></label>
-        <select id="clientid" name="clientid" data-live-search="true" data-width="100%" class="ajax-search" data-none-selected-text="<?php echo _l('dropdown_non_selected_tex'); ?>">
+        <select id="clientid" name="clientid" data-width="100%" class="searchlive" data-none-selected-text="<?php echo _l('dropdown_non_selected_tex'); ?>">
           <option value="">-- Select Client --</option>
           <?php
           if(isset($contacts))

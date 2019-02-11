@@ -3,7 +3,7 @@ foreach ($userdatas as $userdata)
 {
  $date = $userdata['a_created_at'];
  $format = date_create($date);
- $formatted_date = date_format($format,'l jS F Y');
+ $formatted_date = date_format($format,'D-d M Y');
  $circles = 6;
 
  $id = $this->session->userdata('staff_user_id');

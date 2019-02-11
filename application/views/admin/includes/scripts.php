@@ -36,6 +36,7 @@
 <?php } ?>
 <?php } ?>
 <?php echo app_script('assets/js','main.js'); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <?php
 /**
  * Global function for custom field of type hyperlink
@@ -53,7 +54,9 @@ app_js_alerts();
  */
 if(get_option('pusher_realtime_notifications') == 1){ ?>
 <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
 <script type="text/javascript">
+
  $(function(){
    // Enable pusher logging - don't include this in production
    // Pusher.logToConsole = true;
@@ -67,6 +70,10 @@ if(get_option('pusher_realtime_notifications') == 1){ ?>
    channel.bind('notification', function(data) {
       fetch_notifications();
    });
+});
+         $(document).ready(function() {
+    $('.search-live').select2();
+   
 });
 </script>
 <?php } ?>

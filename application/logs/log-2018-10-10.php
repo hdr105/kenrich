@@ -399,3 +399,20 @@ ERROR - 2018-10-10 17:02:36 --> Could not find the language line "save & Update"
 ERROR - 2018-10-10 14:02:37 --> 404 Page Not Found: Assets/fonts
 ERROR - 2018-10-10 17:02:46 --> Could not find the language line "New Diet"
 ERROR - 2018-10-10 14:02:46 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 18:54:33 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 18:54:35 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 21:54:38 --> Could not find the language line "Client"
+ERROR - 2018-10-10 18:54:39 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 21:54:41 --> Could not find the language line "Client"
+ERROR - 2018-10-10 18:54:41 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 21:54:43 --> Could not find the language line "Client"
+ERROR - 2018-10-10 18:54:43 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 21:54:47 --> Could not find the language line "Client"
+ERROR - 2018-10-10 18:54:47 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 19:06:55 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 22:06:57 --> Could not find the language line "Client"
+ERROR - 2018-10-10 19:06:57 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 22:06:59 --> Could not find the language line "Client"
+ERROR - 2018-10-10 19:07:00 --> 404 Page Not Found: Assets/fonts
+ERROR - 2018-10-10 22:07:00 --> Could not find the language line "Client"
+ERROR - 2018-10-10 19:07:01 --> 404 Page Not Found: Assets/fonts

@@ -4,7 +4,7 @@ foreach ($userdatas as $userdata) {
 	$id = $this->session->userdata('staff_user_id');
 	$date_wise = get_data_via_date($date,$id);
 	$format = date_create($date);
-	$formatted_date = date_format($format,'l jS F Y');
+	$formatted_date = date_format($format,'D-d M Y');
 	?>
 	<div class="row head-style">
 		<div class="col-md-8">

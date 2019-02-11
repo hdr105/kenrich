@@ -5,7 +5,7 @@
   $power = $userdata['p_nap_from'];
   $date = $userdata['nap_created_at'];
   $format = date_create($date);
-  $formatted_date = date_format($format,'l jS F Y');
+  $formatted_date = date_format($format,'D-d M Y');
 
   ?>
 
@@ -18,7 +18,7 @@
         <th><?php echo $formatted_date; ?></th>
       </thead>
       <thead>
-        <th class="clr-yellow <?php echo(empty($disturbed) && empty($power)?'':'pointer'); ?>"><a data-toggle="collapse" data-target="#collapseExample<?php echo $userdata['s_id']; ?>" aria-expanded="false" aria-controls="collapseExample">
+        <th data-toggle="collapse" data-target="#collapseExample<?php echo $userdata['s_id']; ?>" aria-expanded="false" aria-controls="collapseExample" class="clr-yellow <?php echo(empty($disturbed) && empty($power)?'':'pointer'); ?>"><a >
          <i class="fa fa-moon-o" aria-hidden="true" style="color: #fff"></i>
         </a></th>
         <th class="clr-yellow">Sleep</th>

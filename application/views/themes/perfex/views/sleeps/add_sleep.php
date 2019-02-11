@@ -14,7 +14,7 @@
 				<?php echo render_time_feild('from','From'); ?>
 				
 				
-				<?php echo render_time_feild('to','To'); ?>
+				<?php echo render_time_feild('to','Till'); ?>
 				
 
 
@@ -54,10 +54,11 @@
 				<div class="alert alert-danger animated fadeIn">
 					
 				</div>
-
-				<button type="submit" id="submit" class="btn btn-info mleft10 proposal-form-submit save-and-send transaction-submit">
+				<div class="row text-center mt-20">
+				<button type="submit" id="submit" class="btn btn-info mt-2 mleft10 proposal-form-submit save-and-send transaction-submit">
 					<?php echo _l('save_and_send'); ?>
 				</button>
+			</div>
 			</form>
 		</div>
 	</div>

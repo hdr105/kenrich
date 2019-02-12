@@ -38,7 +38,7 @@ define('APP_ENC_KEY','b6536850192806b110a75acb8d660db0');
 /* Database credentials - Auto added on install */
 
 /* The hostname of your database server. */
-define('APP_DB_HOSTNAME','localhost:3307');
+define('APP_DB_HOSTNAME','localhost:3306');
 /* The username used to connect to the database */
 define('APP_DB_USERNAME','root');
 /* The password used to connect to the database */

@@ -9,6 +9,12 @@ foreach($quickActions as $key => $item){
 }
 }
 ?>
+<style type="text/css">
+@font-face {
+  font-family: DINPro-Regular!important;
+  src: url(<?php echo base_url('assets/fonts/DINPro-Regular.otf'); ?>);
+}
+</style>
 <aside id="menu" class="sidebar">
  <ul class="nav metis-menu" id="side-menu">
   <li class="dashboard_user<?php if($total_qa_removed == count($quickActions)){echo ' dashboard-user-no-qa';}?>">
@@ -70,9 +76,16 @@ Spam Filters</a>
   Modules         <span class="fa arrow"></span>
 </a>
 <ul class="nav nav-second-level collapse" aria-expanded="false">
-  <li class="sub-menu-item-child-proposals"><a href="#">
+  <li class="sub-menu-item-child"><a onclick="return true;" href="<?php echo base_url('admin/lifestyle') ?>">
   Lifestyle</a>
-</li>
+ <ul class="nav nav-second-level collapse" aria-expanded="false">
+
+  <!--   <li class="sub-menu-item-child-items"><a href=""> Food & Nutrition diary</a></li> -->
+    <li class="sub-menu-item-child-items"><a href="<?php echo base_url('admin/lifestyle') ?>"> Food & Nutrition diary </a></li>
+    <li class="sub-menu-item-child-items"><a data-toggle="tab" href="#sleep"> Sleep diary</a></li>
+    <li class="sub-menu-item-child-items"><a data-toggle="tab" href="#activity"> Daily activity</a></li>
+  </ul> 
+  </li>
 <li class="sub-menu-item-child-estimates"><a href="#">
 Ovulation</a>
 </li>
